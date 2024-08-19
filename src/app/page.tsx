@@ -3,11 +3,15 @@
 import * as React from "react";
 import { useFetchValue, useStoreValue } from "@nillion/client-react-hooks";
 import { useState } from "react";
+import { client } from "./layout";
 
 export default function Home() {
   const [id, setId] = useState("");
   const storeValue = useStoreValue();
+
+  console.log("client", client);
   console.log("storeValue", storeValue);
+
   const fetchValue = useFetchValue(
     {
       id,
